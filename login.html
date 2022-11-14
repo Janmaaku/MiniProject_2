@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In System</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">    
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+    <!--CSS only-->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style3.css">
+
+    <style>
+        body{
+            background-color: black;
+            padding-top: 0;
+            background-repeat: no-repeat;
+            background-image: url('img/banner_login.jpg');
+            background-position: center;
+            background-size: cover;
+        }
+        #logButton{
+            cursor: pointer;
+            border: 0;
+            color: #000;
+            background: #ff002f2f;
+            padding: 18px 32px;
+            border-radius: 6px;
+            font: 600 22px 'Roboto';
+            box-shadow: 0 6px 0 #ff0030;
+            transition: .3s;
+        }
+        #logButton:active{
+            transform: translateY(5px);
+            box-shadow: 0 3px 0 #ff0030;
+        }
+
+        .navbar-light .navbar-nav .nav-link{
+    padding: 0 20px;
+    color: black;
+    transition: 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active{
+     color: #f9004d;;
+}
+
+#reg, #log{
+    background-color: #f9004d;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition:  .4s;
+}
+#reg:hover, #log:hover{
+    transform: scale(1.2);
+}
+
+      
+    </style>
+</head>
+<body>
+    <!--Nav Section-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3">
+        <div class="container">
+            <img src="img/tara.png" alt="" class="rounded rounded-circle" style="height: 6rem;">
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto float-right">
+              
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="shop.html">SHOP</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">ABOUT US</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#fot">CONTACT US</a>
+              </li>
+              <li>
+                <a href="registration.html" class="btn pm-3">Register</a>     
+            </li>
+           
+            </ul>
+           
+          </div>
+        </div>
+      </nav>
+    <center>
+        
+        <div class="login-container text-white ">
+            <h2>Hello, Tara Takbo</h2>
+            <form class="form-container mb-4 mt-4" name="myForm">
+                <label for="email"  class="mb-1">Email</label>
+                <input type="text" id="email" name="email" class="mb-3">
+                <label for="password" class="mb-1">Password</label>
+                <input type="password" id="password" name="password">
+                <br><br>
+                <input type="button" name="log" id="logButton" value="Login" onclick="Login_form();">
+            </form>
+
+            <button class="btn btn-light bg-warning text-dark " style="background-color: black;" type="button" data-bs-dismiss="modal" data-bs-target="#modal1" data-bs-toggle="modal">
+              Forgot Password
+       </button>
+    
+        <!-- main modal -->
+            <div class="modal fade text-dark" id="modal1" tabindex="-1">
+                    <div class="modal-dialog">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalTitle">
+                                    Hello Friend!</h5>
+                                    <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="close">
+                                </button>
+                            </div>
+    <!-- body -->
+                                <div class="modal-body">
+                                    <p>Input your email address and we will send you your password</p>
+                                    <input type="email" class="form-control mb-3">
+                                    <div class="btn btn-info">Send Me My Password</div>
+                                </div>
+    <!-- body -->
+    <!-- modal footer -->
+                                <div class="modal-footer ">
+                                    <button class="btn btn-primary text-center" type="button" data-bs-dismiss="modal">
+                                        Close
+                                        </button>
+                                </div>
+     <!-- modal footer -->
+        </div>
+                    </div>
+                </div>     
+    </center>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    
+</body>
+<script src="main.js"></script>
+</html>
